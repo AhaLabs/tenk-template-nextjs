@@ -33,22 +33,24 @@ export default function Layout({
         <meta name="twitter:title" content={title} />
       </Head>
       {children}
-      <footer
-        style={{
-          marginTop: `2rem`,
-        }}
-      >
-        <select
-          defaultValue={currentLocale}
-          onChange={({ target }) => router.push(`./${target.value}`)}
+      {currentLocale && (
+        <footer
+          style={{
+            marginTop: `2rem`,
+          }}
         >
-          {locales.map((locale) => (
-            <option key={locale.id} value={locale.id}>
-              {presentLocale(locale)}
-            </option>
-          ))}
-        </select>
-      </footer>
+          <select
+            defaultValue={currentLocale}
+            onChange={({ target }) => router.push(`./${target.value}`)}
+          >
+            {locales.map((locale) => (
+              <option key={locale.id} value={locale.id}>
+                {presentLocale(locale)}
+              </option>
+            ))}
+          </select>
+        </footer>
+      )}
     </div>
   );
 }

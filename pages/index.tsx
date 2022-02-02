@@ -18,7 +18,6 @@ export default function Home({ locales }) {
       );
 
     if (matchingLocale) {
-      console.log({ locales, preferredLocale, matchingLocale });
       router.push(`./${matchingLocale.id}`);
     }
   }, [locales, router]);
