@@ -15,8 +15,8 @@ This codebase explores using [Next.js](https://nextjs), a static-site generator 
 1. Start by looking at [`settings.json`](./settings.json) and the JSON files in [the `i18n` folder](./i18n).
 2. You'll see that these files are then used by [`lib/locales.ts`](./lib/locales.ts)
 3. [`pages/[locale].tsx`](./pages/[locale].tsx) then uses `lib/locales.ts` to generate a different landing page for each locale file, so in this case the site ends up with a `/en` page and a `/es` page.
-4. [`pages/index.tsx`](./src/pages/index.tsx) is mostly empty, just showing a list of languages ("View in English", "Ver en Español"), and automatically redirects to the user's preferred language if it's available.
-5. [`src/components/layout.tsx`](./src/components/layout.tsx) shows a language picker in the footer of the page.
+4. [`pages/index.tsx`](./pages/index.tsx) is mostly empty, just showing a list of languages ("View in English", "Ver en Español"), and automatically redirects to the user's preferred language if it's available.
+5. [`components/layout.tsx`](./components/layout.tsx) shows a language picker in the footer of the page.
 
 # Does this site accomplish the design goals above?
 
