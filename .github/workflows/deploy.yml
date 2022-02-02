@@ -16,6 +16,8 @@ jobs:
         run: |
           yarn install --frozen-lockfile
           yarn build
+        env:
+          BASE_PATH: /tenk-template-nextjs
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:

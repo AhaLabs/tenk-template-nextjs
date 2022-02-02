@@ -15,6 +15,7 @@ module.exports = withPlugins(
   ],
   // Next.js core config here
   {
+    basePath: process.env.BASE_PATH || "",
     images: {
       loader: "custom",
       disableStaticImages: true,
