@@ -40,7 +40,7 @@ export default function Layout({
       >
         <select
           defaultValue={currentLocale}
-          onChange={({ target }) => router.push(`/${target.value}`)}
+          onChange={({ target }) => router.push(`./${target.value}`)}
         >
           {locales.map((locale) => (
             <option key={locale.id} value={locale.id}>
