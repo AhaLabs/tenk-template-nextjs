@@ -21,7 +21,7 @@ export default function Home({ locales }) {
       console.log({ locales, preferredLocale, matchingLocale });
       router.push(`/${matchingLocale.id}`);
     }
-  }, []);
+  }, [locales, router]);
 
   return (
     <Layout>
