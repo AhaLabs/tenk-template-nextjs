@@ -26,6 +26,8 @@ Mostly. Some caveats:
 
   Next.js does offer [Internationalized Routing](https://nextjs.org/docs/advanced-features/i18n-routing), but it does not work with [`next export`, Next's **full** static-site generation mode](https://nextjs.org/docs/advanced-features/static-html-export#unsupported-features)
 
+* **Uncustomizable `lang`**: related to the above, Next.js does not allow customizing `<html lang="en">` on each page. See [`pages/_document.tsx`](pages/_document.tsx)
+
 * **Unoptimized images**: Like Internationalized Routing, Next's default handling of images relies on at least some server-rendered components rather than being fully statically-generated. This attempts to use `next-optimized-images` as suggested [by the Next.js team](https://github.com/vercel/next.js/discussions/19065), but this is a community-created library and is poorly supported, and we haven't yet been able to get it to work.
 
 # How automating such a site would work
